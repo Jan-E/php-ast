@@ -1515,7 +1515,9 @@ PHP_MINIT_FUNCTION(ast) {
 	ast_register_flag_constant("ARRAY_SYNTAX_LONG", ZEND_ARRAY_SYNTAX_LONG);
 	ast_register_flag_constant("ARRAY_SYNTAX_SHORT", ZEND_ARRAY_SYNTAX_SHORT);
 
+#if PHP_VERSION_ID < 80400
 	ast_register_flag_constant("DIM_ALTERNATIVE_SYNTAX", ZEND_DIM_ALTERNATIVE_SYNTAX);
+#endif
 
 	ast_register_flag_constant("PARENTHESIZED_CONDITIONAL", ZEND_PARENTHESIZED_CONDITIONAL);
 
