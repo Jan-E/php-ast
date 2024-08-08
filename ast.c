@@ -298,7 +298,9 @@ static const char *func_flags[] = {
 };
 
 static const char *dim_flags[] = {
+#if PHP_VERSION_ID < 80400
 	AST_FLAG(DIM_ALTERNATIVE_SYNTAX),
+#endif
 	AST_FLAG(ENCAPS_VAR_DOLLAR_CURLY),
 	NULL
 };
